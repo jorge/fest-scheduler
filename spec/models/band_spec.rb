@@ -16,13 +16,13 @@ tags = {
 }
 
 RSpec.describe Band, tags do
-  subject(:show_set) { described_class.new }
+  subject(:band) { described_class.new }
 
   it 'has readonly name' do
     is_expected.to have_readonly_attribute(:name)
   end
 
   it 'has many show_sets' do
-    is_expected.to have_many(:show_sets)
+    is_expected.to have_many(:show_sets )
   end
 end
