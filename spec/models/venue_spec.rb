@@ -12,5 +12,18 @@
 require 'rails_helper'
 
 RSpec.describe Venue, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:venue) { described_class.new }
+
+  it 'has readonly name' do
+    is_expected.to have_readonly_attribute(:name)
+  end
+
+  it 'has readonly address' do
+    is_expected.to have_readonly_attribute(:address)
+  end
+
+  it 'has many show_sets' do
+    is_expected.to have_many(:show_sets)
+  end
+
 end

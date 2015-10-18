@@ -10,4 +10,8 @@
 #
 
 class Venue < ActiveRecord::Base
+  attr_readonly :name
+  attr_readonly :address
+
+  
 end
