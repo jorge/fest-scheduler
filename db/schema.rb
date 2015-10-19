@@ -31,6 +31,10 @@ ActiveRecord::Schema.define(version: 20151012055625) do
   create_table "time_slots", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "band_id"
+    t.integer  "venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
