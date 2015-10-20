@@ -23,6 +23,6 @@ RSpec.describe Band, tags do
   end
 
   it 'has many show_sets' do
-    is_expected.to have_many(:show_sets )
+    is_expected.to have_many(:show_sets)
   end
 end

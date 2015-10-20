@@ -13,5 +13,6 @@ class Venue < ActiveRecord::Base
   attr_readonly :name
   attr_readonly :address
 
-  
+  has_many :show_sets
+  has_many :time_slots
 end

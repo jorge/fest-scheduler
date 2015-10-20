@@ -10,7 +10,6 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-
 class ShowSet < ActiveRecord::Base
   attr_readonly :date
   attr_readonly :band_id
