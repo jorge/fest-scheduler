@@ -10,5 +10,4 @@
 class Band < ActiveRecord::Base
   attr_readonly :name
   has_many :show_sets
-  has_many :time_slots
 end

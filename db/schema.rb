@@ -11,37 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019001533) do
-
-  create_table "bands", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema.define(version: 20_151_019_001_533) do
+  create_table 'bands', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "show_sets", force: :cascade do |t|
-    t.date     "date"
-    t.integer  "band_id"
-    t.integer  "venue_id"
-    t.integer  "time_slot_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table 'show_sets', force: :cascade do |t|
+    t.date 'date'
+    t.integer 'band_id'
+    t.integer 'venue_id'
+    t.integer 'time_slot_id'
+    t.datetime 'created_at',   null: false
+    t.datetime 'updated_at',   null: false
   end
 
-  create_table "time_slots", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.integer  "band_id"
-    t.integer  "venue_id"
+  create_table 'time_slots', force: :cascade do |t|
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
+    t.datetime 'start_time'
+    t.datetime 'end_time'
+    t.integer 'show_set_id'
   end
 
-  create_table "venues", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index 'time_slots', ['show_set_id'], name: 'index_time_slots_on_show_set_id'
 
+  create_table 'venues', force: :cascade do |t|
+    t.string 'name'
+    t.string 'address'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 end

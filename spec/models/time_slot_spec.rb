@@ -2,13 +2,12 @@
 #
 # Table name: time_slots
 #
-#  id         :integer          not null, primary key
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  start_time :datetime
-#  end_time   :datetime
-#  band_id    :integer
-#  venue_id   :integer
+#  id          :integer          not null, primary key
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  start_time  :datetime
+#  end_time    :datetime
+#  show_set_id :integer
 #
 
 require 'rails_helper'

@@ -18,5 +18,5 @@ class ShowSet < ActiveRecord::Base
 
   belongs_to :band
   belongs_to :venue
-  belongs_to :time_slot
+  has_many :time_slots
 end
