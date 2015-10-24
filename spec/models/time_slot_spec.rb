@@ -23,15 +23,16 @@ RSpec.describe TimeSlot, tags do
   it 'has readonly start_time' do
     is_expected.to have_readonly_attribute(:start_time)
   end
+
   it 'has readonly end_time' do
     is_expected.to have_readonly_attribute(:end_time)
   end
 
-  it 'belongs to band' do
-    is_expected.to belong_to(:band)
+  it 'has readonly show_set_id' do
+    is_expected.to have_readonly_attribute(:show_set_id)
   end
 
-  it 'belongs to venue' do
-    is_expected.to belong_to(:venue)
+  it 'belongs to show_set' do
+    is_expected.to belong_to(:show_set)
   end
 end

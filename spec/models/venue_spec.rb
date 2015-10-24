@@ -25,8 +25,4 @@ RSpec.describe Venue, type: :model do
   it 'has many show_sets' do
     is_expected.to have_many(:show_sets)
   end
-
-  it 'has many time_slots' do
-    is_expected.to have_many(:time_slots)
-  end
 end

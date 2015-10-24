@@ -33,10 +33,6 @@ RSpec.describe ShowSet, tags do
     is_expected.to have_readonly_attribute(:venue_id)
   end
 
-  it 'has readonly time_slot_id' do
-    is_expected.to have_readonly_attribute(:time_slot_id)
-  end
-
   it 'belongs to band' do
     is_expected.to belong_to(:band)
   end
@@ -45,7 +41,7 @@ RSpec.describe ShowSet, tags do
     is_expected.to belong_to(:venue)
   end
 
-  it 'belongs to time_slot' do
-    is_expected.to belong_to(:time_slot)
+  it 'has many time_slots' do
+    is_expected.to have_many(:time_slots)
   end
 end
