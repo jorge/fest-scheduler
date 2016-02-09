@@ -6,7 +6,6 @@
 #  date         :date
 #  band_id      :integer
 #  venue_id     :integer
-#  time_slot_id :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
@@ -18,5 +17,5 @@ class ShowSet < ActiveRecord::Base
 
   belongs_to :band
   belongs_to :venue
-  has_many :time_slots
+  belongs_to :time_slot
 end

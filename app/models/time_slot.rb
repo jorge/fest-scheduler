@@ -14,5 +14,13 @@ class TimeSlot < ActiveRecord::Base
   attr_readonly :end_time
   attr_readonly :show_set_id
 
-  belongs_to :show_set, foreign_key: :show_set_id
+  has_many :show_sets
+
+  def formatted_start_time
+    start_time.localtime.strftime('%m/%d %l:%M')
+  end
+
+  def formatted_end_time
+    end_time.localtime.strftime('%m/%d %l:%M')
+  end
 end
