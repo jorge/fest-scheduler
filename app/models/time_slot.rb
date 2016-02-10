@@ -2,13 +2,13 @@
 #
 # Table name: time_slots
 #
-#  id          :integer          not null, primary key
-#  start_time  :datetime
-#  end_time    :datetime
-#  show_set_id :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  start_time :datetime
+#  end_time   :datetime
 #
+
 class TimeSlot < ActiveRecord::Base
   attr_readonly :start_time
   attr_readonly :end_time
